@@ -1,3 +1,6 @@
+#ifndef ETH_H
+#define ETH_H
+
 #include <SPI.h>
 #include <Ethernet.h>
 
@@ -11,3 +14,5 @@ class Eth
         Eth();
         static IPAddress getIpAddress();
 };
+
+#endif

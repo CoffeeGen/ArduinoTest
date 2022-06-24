@@ -1,3 +1,6 @@
+#ifndef USENSOR_H
+#define USENSOR_H
+
 #include "Arduino.h"
 
 class USensor 
@@ -10,3 +13,5 @@ class USensor
         long _duration;
         int _distance, _trigPin, _echoPin;
 };
+
+#endif

@@ -1,12 +1,17 @@
-#ifndef PROTOTHREAD_H
-#define PROTOTHREAD_H
+#ifndef THREAD_H
+#define THREAD_H
+
+/**
+ * Custom implementation for multi-threading.
+ * This isn't really multi-threading, but it achieves the same goal more or less by using time checks.
+ **/
 
 #include <Arduino.h>
 
-class ProtoThread 
+class Thread 
 {
     public:
-        ProtoThread( unsigned long interval,void (*function)() );
+        Thread( unsigned long interval,void (*function)() );
         void reset();
         void disable();
         void enable();

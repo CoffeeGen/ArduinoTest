@@ -1,3 +1,6 @@
+#ifndef MQSENSOR_H
+#define MQSENSOR_H
+
 #include <Arduino.h>
 
 class MqSensor 
@@ -9,3 +12,5 @@ class MqSensor
     private:
         uint8_t _sensorPin;
 };
+
+#endif

@@ -3,7 +3,7 @@
 #include <led.h>
 #include <mqsensor.h>
 #include <eth.h>
-#include <protothread.h>
+#include <thread.h>
 
 #define echoPin         2
 #define trigPin         3
@@ -45,9 +45,9 @@ void checkNetwork( )
     Serial.println( addr );
 }
 
-ProtoThread threads[] = {
-    ProtoThread(200, updateLeds),
-    ProtoThread(1000, checkNetwork),
+Thread threads[] = {
+    Thread(200, updateLeds),
+    Thread(1000, checkNetwork),
 };
 
 void setup()
@@ -72,7 +72,7 @@ void setup()
 
 void loop()
 {
-    for( ProtoThread &t : threads )
+    for( Thread &t : threads )
     {
         t.check();
     }
